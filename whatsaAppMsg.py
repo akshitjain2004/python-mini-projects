@@ -1,4 +1,5 @@
+//pip install pywhatkit
 import pywhatkit
 
 
-pywhatkit.sendwhatmsg("+919284142545","Happy New Year! ",23,59)
+pywhatkit.sendwhatmsg("+91 Your Number","Happy New Year! (message) ",23(hr),59(min))
