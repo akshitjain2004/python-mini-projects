@@ -5,6 +5,7 @@ MIN_BET = 1
 
 ROWS = 3
 COLS = 3
+#dictionary
 symbol_count ={
     "Cherry": 2,
     "Bell": 4,
@@ -21,7 +22,7 @@ def get_slot_machine_spin(rows,cols,symbols):
     #can use _ to iterate
             all_symbols.append(symbol)
 
-    columns = [[],[],[]]
+    columns = []
     for _ in range(cols):
         column =[]
         #copying list, : slice operator
@@ -33,6 +34,18 @@ def get_slot_machine_spin(rows,cols,symbols):
             column.append(value)
         columns.append(column)
 
+#function to print 
+def print_slot_machine(columns):
+    #transposing
+    for row in range(len(columns[0])):
+        #If we use ennumrate it keeps track of the number of iterations in a loop
+        for i, column in enumerate(columns):
+            if i!=len(columns)-1:
+                #end - add at end
+                print(column[row],end=" | ")
+            else:
+                print(column[row],end="")
+        print()
 
 # a function for depositing money
 def deposit():
@@ -87,8 +100,7 @@ def main():
 
     print(f"You are betting ${bet} on {line} lines. Total bet is ${total_bet}")
 
-    print(f"Your balance is ${balance}")
-
-
+    slots = get_slot_machine_spin(ROWS,COLS,symbol_count)
+    print_slot_machine(slots)
 
 main()
