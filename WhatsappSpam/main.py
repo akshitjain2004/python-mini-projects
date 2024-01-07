@@ -1,7 +1,3 @@
-#program by Akshayjyoti Bordoloi
-#version 2.01
-#testing date: September 7, 2021
-
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import time
